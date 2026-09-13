@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>飞书文档 AI 助手 - 配置</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <div class="container">
+    <header class="page-header">
+      <h1>插件配置</h1>
+      <p>请填写飞书应用信息和大模型 API 信息。</p>
+    </header>
+
+    <form id="configForm">
+      <section class="section">
+        <h2>飞书应用</h2>
+        <p class="hint">在飞书开放平台的「凭证与基础信息」中获取。</p>
+        <div class="field">
+          <label for="appId">App ID</label>
+          <input type="text" id="appId" name="appId" placeholder="cli_xxxxxxxxxxxxxxxx" required>
+        </div>
+        <div class="field">
+          <label for="appSecret">App Secret</label>
+          <input type="password" id="appSecret" name="appSecret" placeholder="输入 App Secret" required>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>大模型 API</h2>
+        <p class="hint">支持 OpenAI 兼容接口，如 OpenAI、DeepSeek、Moonshot 等。</p>
+        <div class="field">
+          <label for="baseUrl">Base URL</label>
+          <input type="url" id="baseUrl" name="baseUrl" placeholder="https://api.openai.com/v1" required>
+        </div>
+        <div class="field">
+          <label for="modelName">Model</label>
+          <input type="text" id="modelName" name="modelName" placeholder="gpt-4o / deepseek-chat" required>
+        </div>
+        <div class="field">
+          <label for="apiKey">API Key</label>
+          <input type="password" id="apiKey" name="apiKey" placeholder="sk-xxxxxxxx" required>
+        </div>
+      </section>
+
+      <div class="actions">
+        <button type="submit" class="btn-primary">保存配置</button>
+      </div>
+    </form>
+
+    <div id="status" class="status hidden"></div>
+  </div>
+
+  <script type="module" src="options.js"></script>
+</body>
+</html>
