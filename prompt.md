@@ -31,7 +31,7 @@
     - 提供一个配置页面，要求用户输入飞书应用的app_id和app_secret，以及大模型的 base_url、model_name 和 API_KEY。
     - 飞书文档内容获取需要的Authorization值，通过以下接口获取，请求和返回示例：
         ```请求示例
-      curl -i -X POST 'https://open.feishu.cn/open-apis/auth/v3/tenant\_access\_token/internal' \\ -H 'Content-Type: application/json' \\ -d '{ "app\_id": "cli\_slkdjalasdkjasd", "app\_secret": "dskLLdkasdjlasdKK" }'
+      curl -i -X POST 'https://open.feishu.cn/open-apis/auth/v3/tenant\_access\_token/internal' \\ -H 'Content-Type: application/json' \\ -d '{ "app\_id": "cli\_slkdjalasd***", "app\_secret": "dskLLdkasd***KK" }'
 
         ```
         ```返回示例
